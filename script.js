@@ -54,7 +54,7 @@ $("container").click(function(event) {
 
         var getparent = planinput.parentNode;
 
-        var getplan = getparent.previouselementsibling.value;
+        var getplan = getparent.previousElementSibling.value;
 
         var storage = JSON.parse(localStorage.getItem("taskplan"));
         storage.push(getplan);
