@@ -3,7 +3,7 @@ $("#currentDay").text(new Date());
 
 // Creating variables so program can recognize the current time, and have hours to reporesent a standard 9 to 5.
 var currenthour = new Date().getHours();
-var standardhours = [9, 10, 11, 12, 13, 14, 15, 16, 17];
+var standardhours = [09, 10, 11, 12, 13, 14, 15, 16, 17];
 
 function dayplanner() {
     for (var i = 0; i < standardhours.length; i++) {
@@ -29,6 +29,9 @@ function dayplanner() {
         //Creating a save button
         var savebutton = $("<button>").addClass("saveBtn");
         timeblock.append(savebutton);
+
+        var saveBtn = $("<i>").addClass("savetask");
+        savebutton.append(saveBtn);
 
         // This function will make each hour a certain color to represent if it is in the present, past, or future.
         if (currenthour === standardhours[i]) {
