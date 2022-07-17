@@ -17,8 +17,8 @@ function dayplanner() {
         $(".container").append(timeblock);
 
         //Creating the time block and appending it to the section.
-        var hour = $("<div>").addClass("hour");
-        timeblock.append(hour);
+        var hourrow = $("<div>").addClass("hour");
+        timeblock.append(hourrow);
 
         hour.text(standardhours[i] + ":00");
     }
