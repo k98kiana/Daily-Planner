@@ -27,9 +27,10 @@ function dayplanner() {
         timeblock.append(timeevent);
 
         //Creating a save button
-        var savebutton = $("<button>").addClass("savebutton");
-        timeblock.append(savebutton);
+        var savebutton = $("<button>").addClass("saveBtn");
+        timeblock.append(saveBtn);
 
+        // This function will make each hour a certain color to represent if it is in the present, past, or future.
         if (currenthour === standardhours[i]) {
             timeevent.addClass("present");
 
@@ -39,9 +40,40 @@ function dayplanner() {
           } else {
             timeevent.addClass("future");
           }
-            
-        
     }
+
+    //Saving all events added to times
+    $(".container").click(function(event) {
+        event.preventDefault();
+        var planinput = event.target;
+
+        if (planinput.matches(".saveTask") === true) {
+            event.preventDefault();
+
+            var getparent = planinput.parentNode;
+            var getplan = getparent.previouselementsibling.value;
+
+            var storage = JSON.parse(localStorage.getItem("taskplan"));
+            storage.push(getplan);
+            localStorage.setItem("taskplan"; JSON.stringify(storage));
+            rendertask();
+        }
+    });
+}
+//Saving events even when page is refresed
+function rendertask () {
+  var storage = JSON.parse(localStorage.getItem("taskplan"));
+  for (var i = 0; i < storage.length; i++) {
+    #("#" + i).text(storage[i]);
+  }  
 }
 
+// A local storage will be created if there isn't one already
+if (localStorage.getItem("taskplan") === null) {
+    localStorage.setItem("taskplan", JSON.stringify([]));
+}
+
+//Create time schedule
 dayplanner();
+rendertask();
+
