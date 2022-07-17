@@ -79,7 +79,3 @@ dayplanner();
 if (localStorage.getItem("taskplan") === null) {
 localStorage.setItem("taskplan", JSON.stringify([]));
 }
-
-
-rendertask();
-
