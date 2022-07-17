@@ -30,7 +30,7 @@ function dayplanner() {
         var savebutton = $("<button>").addClass("saveBtn");
         timeblock.append(savebutton);
 
-        var saveBtn = $("<i>").addClass("fa fa-save");
+        var saveBtn = $("<i>").addClass("saveTask fa fa-save");
         savebutton.append(saveBtn);
 
         // This function will make each hour a certain color to represent if it is in the present, past, or future.
@@ -46,7 +46,7 @@ function dayplanner() {
     }
 
     //Saving all events added to times
-    $(".container").click(function(event) {
+    $(".container").click(function (event) {
         event.preventDefault();
         var planinput = event.target;
 
@@ -54,6 +54,7 @@ function dayplanner() {
             event.preventDefault();
 
             var getparent = planinput.parentNode;
+
             var getplan = getparent.previouselementsibling.value;
 
             var storage = JSON.parse(localStorage.getItem("taskplan"));
