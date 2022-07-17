@@ -71,12 +71,14 @@ function rendertask () {
   }  
 }
 
+//Create time schedule
+dayplanner();
+
 // A local storage will be created if there isn't one already
 if (localStorage.getItem("taskplan") === null) {
     localStorage.setItem("taskplan", JSON.stringify([]));
 }
 
-//Create time schedule
-dayplanner();
+
 rendertask();
 
