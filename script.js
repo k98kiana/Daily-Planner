@@ -23,7 +23,7 @@ function dayplanner() {
         hourrow.text(standardhours[i] + ":00");
 
         // Creating a textbox that will be used to add events for each hour.
-        var timeevent = $("<textarea>").addClass("event").attr("id", i);
+        var timeevent = $("<textarea>").addClass("description").attr("id", i);
         timeblock.append(timeevent);
 
         //Creating a save button
