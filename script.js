@@ -64,7 +64,7 @@ function dayplanner() {
 function rendertask () {
   var storage = JSON.parse(localStorage.getItem("taskplan"));
   for (var i = 0; i < storage.length; i++) {
-    #("#" + i).text(storage[i]);
+    ("#" + i).text(storage[i]);
   }  
 }
 
