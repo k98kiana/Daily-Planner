@@ -47,6 +47,7 @@ function dayplanner() {
 
 //Saving all events added to times
 $("container").click(function(event) {
+    event.preventDefault();
     var planinput = event.target;
    
     if (planinput.matches(".saveTask") === true) {
