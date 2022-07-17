@@ -29,6 +29,18 @@ function dayplanner() {
         //Creating a save button
         var savebutton = $("<button>").addClass("savebutton");
         timeblock.append(savebutton);
+
+        if (currenthour === standardhours[i]) {
+            timeevent.addClass("present");
+
+         } else if (currenthour > standardhours[i]) {
+                timeevent.addClass("past");
+
+          } else {
+            timeevent.addClass("future");
+          }
+            
+        
     }
 }
 
