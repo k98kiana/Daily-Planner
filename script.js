@@ -23,3 +23,5 @@ function dayplanner() {
         hourrow.text(standardhours[i] + ":00");
     }
 }
+
+dayplanner();
