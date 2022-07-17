@@ -28,7 +28,7 @@ function dayplanner() {
 
         //Creating a save button
         var savebutton = $("<button>").addClass("saveBtn");
-        timeblock.append(saveBtn);
+        timeblock.append(savebutton);
 
         // This function will make each hour a certain color to represent if it is in the present, past, or future.
         if (currenthour === standardhours[i]) {
