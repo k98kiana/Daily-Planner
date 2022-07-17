@@ -55,7 +55,7 @@ function dayplanner() {
 
             var storage = JSON.parse(localStorage.getItem("taskplan"));
             storage.push(getplan);
-            localStorage.setItem("taskplan"; JSON.stringify(storage));
+            localStorage.setItem("taskplan", JSON.stringify(storage));
             rendertask();
         }
     });
