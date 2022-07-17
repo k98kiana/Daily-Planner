@@ -20,6 +20,6 @@ function dayplanner() {
         var hourrow = $("<div>").addClass("hour");
         timeblock.append(hourrow);
 
-        hour.text(standardhours[i] + ":00");
+        hourrow.text(standardhours[i] + ":00");
     }
 }
